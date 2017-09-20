@@ -1,7 +1,8 @@
-#**********************
+# **********************
 # PY核心模块方法
-#**********************
-##os模块:
+# **********************
+
+## os模块:
 * os.`remove()`         删除文件
 * os.`unlink()`         删除文件 
 * os.`rename()`         重命名文件 
@@ -23,7 +24,7 @@
 * os.`spawn()`          执行外部程序脚本（Windows）
 * os.`access(path, mode)` 判断文件权限(详细参考cnblogs)
 
-##os.path模块：
+## os.path模块：
 * `os.path.split(filename)`         将文件路径和文件名分割(会将最后一个目录作为文件名而分离)
 * `os.path.splitext(filename)`      将文件路径和文件扩展名分割成一个元组
 * `os.path.dirname(filename)`       返回文件路径的目录部分
@@ -86,7 +87,7 @@
 * `sys.setdefaultencoding(name)`    用来设置当前默认的字符编码(详细使用参考文档) 
 * `sys.displayhook(value)`          如果value非空，这个函数会把他输出到sys.stdout(详细使用参考文档)
 
-##datetime,date,time模块：
+## datetime,date,time模块：
 * `datetime.date.today()`           本地日期对象,(用str函数可得到它的字面表示(2014-03-24))
 * `datetime.date.isoformat(obj)`    当前[年-月-日]字符串表示(2014-03-24)
 * `datetime.date.fromtimestamp()`   返回一个日期对象，参数是时间戳,返回 [年-月-日]
@@ -107,11 +108,11 @@
 * `time.localtime`
 * `time.gmtime`   
 
-##hashlib,md5模块：
+## hashlib,md5模块：
 * `hashlib.md5('md5_str').hexdigest()`      对指定字符串md5加密
 * `md5.md5('md5_str').hexdigest()`          对指定字符串md5加
 
-##random模块：
+## random模块：
 * `random.random()`             产生0-1的随机浮点数
 * `random.uniform(a, b)`        产生指定范围内的随机浮点数
 * `random.randint(a, b)`        产生指定范围内的随机整数
@@ -120,7 +121,7 @@
 * `random.shuffle(x[, random])` 将一个列表中的元素打乱
 * `random.sample(sequence, k)`  从序列中随机获取指定长度的片断
  
-##MySQLdb模块：
+## MySQLdb模块：
 * `MySQLdb.get_client_info()`           获取API版本
 * `MySQLdb.Binary('string')`            转为二进制数据形式
 * `MySQLdb.escape_string('str')`        针对mysql的字符转义函数
@@ -128,7 +129,7 @@
 * `MySQLdb.TimestampFromTicks(1395842548)`   把时间戳转为datetime.datetime对象实例
 * `MySQLdb.string_literal('str')`       字符转义
 
-##string模块：
+## string模块：
 * `str.capitalize()`            把字符串的第一个字符大写
 * `str.center(width)`           返回一个原字符串居中，并使用空格填充到width长度的新字符串
 * `str.ljust(width)`            返回一个原字符串左对齐，用空格填充到指定长度的新字符串
@@ -169,7 +170,7 @@
 * `str.translate(str,del='')`   按str给出的表转换string的字符，del是要过虑的字符
     
 
-##urllib模块：
+## urllib模块：
 * `urllib.quote(string[,safe])`             对字符串进行编码。参数safe指定了不需要编码的字符
 * `urllib.unquote(string)`                  对字符串进行解码
 * `urllib.quote_plus(string[,safe])`        urllib.quote类似，但这个方法用'+'来替换' '，而quote用'%20'来代替' '
@@ -191,7 +192,7 @@
 * `urlrs.getcode()`     获取请求返回状态HTTP状态码
 * `urlrs.geturl()`      返回请求的URL
 
-##urllib2模块：   
+## urllib2模块：   
 * 1、基本用法
 
 > * import urllib2
@@ -232,10 +233,10 @@
 > * response = urllib2.urlopen(request)
 > * print response.read()
 
-##urlparse模块：    
+## urlparse模块：    
     
     
-##re模块：
+## re模块：
 * `import re`                           #导入re模块
 * `re.compile(pattren, flags=0)`        #编译一个匹配正则表达式，返回一个匹配对象
 * `re.match(pattern, string, flags=0)`  #利用正则表达式匹配一个字符串，如果匹配到返回匹配到的对象，如果没有则返回空
