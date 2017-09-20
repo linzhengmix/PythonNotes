@@ -57,7 +57,7 @@
 * `os.path.walk(path, visit, arg)`  #遍历path，给每个path执行一个函数详细见手册
 * `os.path.supports_unicode_filenames()`     设置是否支持unicode路径名
 
-##sys模块：
+## sys模块：
 * `sys.argv`                命令行参数List，第一个元素是程序本身路径 
 * `sys.path`                返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值 
 * `sys.modules.keys()`      返回所有已经导入的模块列表
