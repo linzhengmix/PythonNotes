@@ -1,0 +1,90 @@
+---
+title: "PythonJobs"
+author: "Borg"
+date: "2016年10月23日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Python Jobs Analysis  
+Data used could be obtained in my [Github repo](https://github.com/BigBorg/Scrapy-playground). I wrote a spider using Scrapy framwork and used python for some data cleaning. All the spider and data processing codes are available, please refer to my github repo if you are interested.
+
+## Loade data
+```{r }
+library(DBI)
+library(RSQLite)
+library(ggplot2)
+library(plotly)
+library(dplyr)
+library(leaflet)
+file <- "../data/Items.db"
+driver <- dbDriver("SQLite")
+conn <- dbConnect(driver,file)
+city <- dbGetQuery(conn,'SELECT * FROM cities')
+geo_job <- dbGetQuery(conn,'SELECT url,lat,lon,title,company,city,location  FROM geo_job INNER JOIN jobs ON geo_job.id_foreign==jobs.id')
+```
+
+## Missing Lat and Lon
+### Missing lat and lon for job item
+```{r }
+index <- complete.cases(geo_job)
+complete_geo <- geo_job[index==TRUE,]
+missing_sum <- nrow(geo_job) - sum(index)
+missing_geo <- geo_job[index==FALSE,c(2,3,4,7)]
+head(missing_geo)
+```
+`r missing_sum` job records are missing latitude and longtitude.
+
+### Missing lat and lon for cities
+```{r }
+index_city = complete.cases(city)
+city[index_city==FALSE,]
+```
+
+## Sum by City - Bar Plot
+```{r }
+spl <- strsplit(geo_job$city,'-') 
+tmp <- lapply(spl,function(x) x[1])
+geo_job$city_simple <- unlist(tmp)
+city$city <- reorder(city$city,city$count,function(x){-mean(x)})
+city <- arrange(city,desc(count))
+p <- ggplot(data=city[1:20,],aes(city,count)) + geom_bar(fill='blue',stat = "identity") + labs(x="City",y="Count",title="Python Jobs Count by City")
+ggplotly(p)
+```
+The top 5 cities with most python jobs are `r city$city[1:5]`.
+
+# Sum by City - ScaterGeo
+```{r}
+city$hover <- paste(city$city,': ',city$count," python jobs")
+quan <- quantile(city$count)
+quan[1] <-0
+city$q <- with(city,cut(count,quan,include.lowest=T))
+levels(city$q) <- paste(c('1st','2nd','3rd','4th')," Quantile")
+city$q <- as.ordered(city$q)
+g <- list(
+  scope = 'asia',
+  showland = TRUE,
+  landcolor = toRGB("gray85"),
+  subunitwidth = 1,
+  countrywidth = 1,
+  subunitcolor = toRGB("white"),
+  countrycolor = toRGB("black")
+)
+plot_ly(city, lon = lon, lat = lat, text = hover,
+        marker = list(size = sqrt(count)+9, line = list(width = 0)),
+        color = q, type = 'scattergeo',locationmode="china") %>%
+  layout(title = 'Python Jobs Count by Cites', geo = g)
+```
+Sum of python jobs in a city is represented as the size of circle. Note that this map is interactive. You could click the quantiles in the top right of this map to hide or show related circles.
+
+## leaflet
+```{r }
+m <- leaflet() 
+m <- addTiles(m) 
+m <- addMarkers(m, complete_geo$lon, lat=complete_geo$lat, popup=paste('<br>',"<a href='", complete_geo$url, "'>" , complete_geo$title,"</a>",'<br>',complete_geo$company))
+m
+```
+This map shows exactly where each job is located. You could click on marker to get URL of each job, which I think is the most amazing part.

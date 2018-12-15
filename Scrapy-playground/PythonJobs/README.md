@@ -1,0 +1,4 @@
+# Scrapy
+scrapy爬取python招聘信息，出于道德原因请短时间内不要爬取太多数据
+
+httpProxyDownloaderMiddleware 下载器中间件实际没有用上，因为西刺网站爬取下来的ip实际很多不能用就没用了，不过要是有一堆可用的http代理ip的话这个中间件还是可以再拿来用的
