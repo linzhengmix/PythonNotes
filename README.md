@@ -1,7 +1,8 @@
 # Notes for learning python
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
 This project records some notes of learning Python
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
+
 
 
 ### Includes:
