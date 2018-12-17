@@ -1,10 +1,14 @@
-# Auto_python
+# Notes for learning python
 
-## Study python 
+This project records some notes of learning Python
 
-**This project records some notes of studying Python**
 
-* The Pyhton scripts are some functions
-* The Markdown files are some reference materials
+
+### Includes:
+
++  Basic python skills notes
+  + [Modulesfunctions.md](https://github.com/RinLinux/Auto_python/blob/master/Modulesfunctions.md) 
++ Some useful sources for learning python
++ Some practical projects for learning python
 
 
