@@ -1,4 +1,6 @@
 # Borg 的scrapy爬虫、python数据清洗、R语言可视化项目  
++ Forked from: https://github.com/BigBorg/Scrapy-playground
+
 抓取python招聘信息，获取经纬度，经纬度还需要进一步转换成国际标准，最后在地图上可视化。
 最后产出的R语言写的可视化报告：
 因为html文件比较大，两兆多，github网站国内网速又不是很快，如果加载过慢可以用[七牛外链](http://7xshuq.com1.z0.glb.clouddn.com//githubrepo/scrapy/RAnalysis.html)，还可通过[rpub](http://rpubs.com/Borg/208385)访问，后续更新可能不会更新七牛和rpub，代码仓库内 R-visualization 文件夹下的html文件会是最新版本。
