@@ -8,7 +8,7 @@
 # Description: python class practise
 # 
 # **/
-
+#from imp import reload
 
 import requests
 import re
@@ -16,8 +16,8 @@ from bs4 import BeautifulSoup
 import os
 import sys
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 
 class MeiPic():
@@ -54,7 +54,7 @@ class MeiPic():
         # print isExists
         # print os.getcwd()
         if not isExists:
-            print u'Creating a new file...'
+            print(u'Creating a new file...')
             os.makedirs(os.path.join(parent_path, path))
             return True
         else:
