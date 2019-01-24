@@ -1,11 +1,5 @@
 # encoding: utf-8
 
-"""
-author:Zhenglin
-email:mixfruitszu@gmail.com
-time: 2019/01/19/00/29
-
-"""
 
 import threading
 import time
