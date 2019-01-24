@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2a5960a-1054-459d-a517-a619425c25d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Fibonacci_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fibonacci_obj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iterable_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/iterable_obj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/multi_copy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pool_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pool_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/136bookspider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/136bookspider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/136book/136bookspider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/Python_4weeksspidersystem/Plan_for_combating_master/week1/1_1/1_1code_of_video/the_blah.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/Python_4weeksspidersystem/Plan_for_combating_master/week1/1_1/1_1code_of_video/the_blah.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/my_crawler/class_learn.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/my_crawler/class_learn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanbox/spider/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sanbox/spider/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ximalaya.py" beforeDir="false" afterPath="$PROJECT_DIR$/ximalaya.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,17 +12,18 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/notes4Python$Fibonacci_obj.coverage" NAME="Fibonacci_obj Coverage Results" MODIFIED="1548082971232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes4Python$pool_test.coverage" NAME="pool_test Coverage Results" MODIFIED="1548341689686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes4Python$iterable_obj.coverage" NAME="iterable_obj Coverage Results" MODIFIED="1548083012914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ximalaya.py">
+        <entry file="file://$PROJECT_DIR$/pool_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+            <state relative-caret-position="156">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.iterable_obj">
+  <component name="RunManager" selected="Python.pool_test">
     <configuration name="Fibonacci_obj" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="notes4Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,8 +134,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pool_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="notes4Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pool_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pool_test" />
         <item itemvalue="Python.iterable_obj" />
         <item itemvalue="Python.Fibonacci_obj" />
       </list>
@@ -161,23 +175,22 @@
       <option name="presentableId" value="Default" />
       <updated>1548082167769</updated>
       <workItem from="1548082173438" duration="615000" />
-      <workItem from="1548082830555" duration="581000" />
+      <workItem from="1548082830555" duration="1706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1196000" />
+    <option name="totallyTimeSpent" value="2321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="707" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="707" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3284553" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3284553" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -214,13 +227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pool_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/multiprocessing-test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -243,10 +249,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ximalaya.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pool_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
