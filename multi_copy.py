@@ -3,10 +3,10 @@ import os
 import multiprocessing
 
 def copyfile(q, source_dir, target_dir, filename):
-    source_f = open(source_dir+"/"+filename,'rb')
+    source_f = open(source_dir + "/" + filename, 'rb')
     content = source_f.read()
     source_f.close()
-    target_f = open(target_dir+"/"+filename,'wb')
+    target_f = open(target_dir + "/" + filename, 'wb')
     target_f.write(content)
     target_f.close()
 
@@ -30,7 +30,7 @@ def main():
     # 创建队列
     q = multiprocessing.Manager().Queue()
     for file_name in file_names:
-        po.apply_async(copyfile,(q,source_dir,target_dir,file_name,))
+        po.apply_async(copyfile, (q, source_dir, target_dir, file_name, ))
 
     po.close()
     # po.join()
@@ -38,11 +38,10 @@ def main():
     while True:
         filename = q.get()
         # print("finish copy:  %s" %filename)
-        copy_complete+=1
+        copy_complete += 1
         print("\r finish doing  %.2f %%" % (copy_complete*100 / len(file_names)))
         if copy_complete >= len(file_names):
             break
-
 
     print()
 

@@ -16,7 +16,7 @@ import time
 '''
 
 
-def gethtml(url):    # 获取网站 html 信息
+def Gethtml(url):    # 获取网站 html 信息
     headers = {
         'User-Agent':
         'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'}
@@ -26,7 +26,7 @@ def gethtml(url):    # 获取网站 html 信息
     return html
 
 
-def getid():    # 获取专辑的 id 和标题信息
+def Getid():    # 获取专辑的 id 和标题信息
     keyword = input('请输入你要查找的音频关键字:\n')     # 输入需要下载音频的关键字
     albumurl = 'https://www.ximalaya.com/search/album/{}/sc/p1'.format(keyword)    # 输入关键字，拼接链接
     html = gethtml(albumurl)
@@ -48,7 +48,7 @@ def getid():    # 获取专辑的 id 和标题信息
     return ids, titles
 
 
-def downm4a(albumId):
+def Downm4a(albumId):
     # 获取专辑下的音频总数
     counturl = 'https://www.ximalaya.com/revision/album/getTracksList?albumId={}&pageNum=1'.format(albumId)
     chtml = gethtml(counturl)
@@ -63,7 +63,7 @@ def downm4a(albumId):
             pageNum = (trackTotalCount // 30) + 1                  # 音频数大于 30 时，不是30的倍数时
     for num in range(1, pageNum+1):
         m4aurl = 'https://www.ximalaya.com/revision/play/album?albumId={}&pageNum={}&pageSize=30'.format(albumId, num)  # 拼接可下载音频信息的链接
-        mhtml = gethtml(m4aurl)
+        mhtml = Gethtml(m4aurl)
         mjson = mhtml.json()
         for i in range(30):     # 一个页面最多30个音频文件
             try:
@@ -83,7 +83,7 @@ def downm4a(albumId):
 
 
 def mkdir():   # 判断目录是否存在，不存在的话则自动创建
-    ids, titles = getid()
+    ids, titles = Getid()
     for title, albumId in zip(titles, ids):
         print(title)
         path = './ximalaya/{}'.format(title)   # 以音频名称命名
@@ -92,11 +92,11 @@ def mkdir():   # 判断目录是否存在，不存在的话则自动创建
             print('创建目录{}'.format(title))     # 目录不存在则创建一个
             os.makedirs(path)                     # 创建目录
             os.chdir(path)                        # 切换到创建的文件夹
-            downm4a(albumId)                      # 调用函数下载音频到该目录下
+            Downm4a(albumId)                      # 调用函数下载音频到该目录下
         else:
             print('{}目录已存在,即将保存！'.format(title))
             os.chdir(path)                      # 切换到创建的文件夹
-            downm4a(albumId)                    # 目录已存在时直接保存
+            Downm4a(albumId)                    # 目录已存在时直接保存
         time.sleep(int(format(random.randint(2, 6))))    # 随机等待
 
 

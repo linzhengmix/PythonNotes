@@ -5,7 +5,7 @@ class Classmate(object):
         self.current_num = 0
 
 
-    def add(self,name):
+    def add(self, name):
         self.names.append(name)
 
 
