@@ -9,8 +9,6 @@ monkey.patch_all()
 def getImageUrl():
     pass
 
-
-
 def downloader(filename,url):
     req = urllib.request.urlopen(url)
     content = req.read()
