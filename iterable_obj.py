@@ -1,4 +1,6 @@
 
+import numpy
+
 class Classmate(object):
     def __init__(self):
         self.names = list()
@@ -28,3 +30,20 @@ Classmate.add("王五")
 
 for name in Classmate:
     print(name)
+
+
+def triangles():
+    L = [1]
+    while 1:
+        yield L
+        L = [1] + [L[i] + L[i+1] for i in range(len(L)-1)] + [1]
+
+triangles()
+n = 0
+results = []
+for t in triangles():
+    print(t)
+    results.append(t)
+    n = n + 1
+    if n == 15:
+        break
