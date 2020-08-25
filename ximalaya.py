@@ -16,7 +16,7 @@ import time
 '''
 
 
-def Gethtml(url):    # 获取网站 html 信息
+def gethtml(url):    # 获取网站 html 信息
     headers = {
         'User-Agent':
         'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'}
@@ -63,7 +63,7 @@ def Downm4a(albumId):
             pageNum = (trackTotalCount // 30) + 1                  # 音频数大于 30 时，不是30的倍数时
     for num in range(1, pageNum+1):
         m4aurl = 'https://www.ximalaya.com/revision/play/album?albumId={}&pageNum={}&pageSize=30'.format(albumId, num)  # 拼接可下载音频信息的链接
-        mhtml = Gethtml(m4aurl)
+        mhtml = gethtml(m4aurl)
         mjson = mhtml.json()
         for i in range(30):     # 一个页面最多30个音频文件
             try:
